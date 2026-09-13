@@ -1,0 +1,51 @@
+# Uploaded images. Anything uploaded through the site from here on stays out
+# of the repository; the seeded demo images that the sample data points at are
+# kept, so a fresh clone still shows real photographs rather than the genre
+# fallback artwork.
+public/uploads/avatars/*
+public/uploads/posts/*
+!public/uploads/*/.gitkeep
+
+# The seeded images (referenced by rows in posts.image and users.profile_picture).
+!public/uploads/posts/hoi_an.jpg
+!public/uploads/posts/lofoten.jpg
+!public/uploads/posts/ngorongoro.jpg
+!public/uploads/posts/post_6a998a78aa743_uyuni.jpg
+!public/uploads/posts/post_6a998a78aa749_hampi.jpg
+!public/uploads/posts/praia_do_sancho.jpg
+!public/uploads/posts/sigiriya.jpg
+!public/uploads/posts/sorvagsvatn.jpg
+!public/uploads/posts/stone_town.jpg
+!public/uploads/posts/wadi_rum.jpg
+!public/uploads/avatars/avatar_admin.jpg
+!public/uploads/avatars/avatar_scout1.jpg
+!public/uploads/avatars/avatars-a86b941922fed674-1788460501.jpg
+
+# The 29 Bangladesh dispatch photographs, also referenced by posts.image.
+!public/uploads/posts/bd_*.jpg
+
+# Local configuration overrides
+config/config.local.php
+
+# Editor and OS noise
+.vscode/
+.idea/
+Thumbs.db
+desktop.ini
+*.log
+
+# Scratch folder - AI session exports and one-off scripts, not part of the project.
+don't touch/
+
+# Project instruction file - kept locally, not part of the submitted work.
+CLAUDE.md
+
+# Coursework material and working notes, not application code.
+facultyPRD.pdf
+*.docx
+image-prompts.md
+TravelVista-project.zip
+
+# Distribution pack for teammates - not part of the application.
+team-handover/
+student-packs/
