@@ -1,0 +1,4 @@
+# Nothing in here is meant to be fetched by URL - PHP require()s these files
+# from disk, which Apache access control does not affect. Blocking direct
+# access means a PHP outage cannot serve them as plain source.
+Require all denied

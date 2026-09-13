@@ -1,0 +1,25 @@
+# Front controller.
+# The PRD asks for real API paths such as /api/wishlist/add. Nothing exists at
+# that location on disk, so Apache has to hand the request to index.php instead
+# of answering 404. Real files (CSS, JS, uploads) are served normally.
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /TravelVista/
+
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^ index.php [QSA,L]
+</IfModule>
+
+# The project root is also the web root, so anything sitting in it can be
+# fetched by URL unless it is blocked. Database dumps and notes are not for
+# visitors; PHP files are executed rather than shown, so they are not the risk.
+<FilesMatch "\.(sql|md|log|bak|ini|yml|yaml|dist|example)$">
+    Require all denied
+</FilesMatch>
+
+# .env, .gitignore, .htaccess itself
+<FilesMatch "^\.">
+    Require all denied
+</FilesMatch>
