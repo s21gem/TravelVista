@@ -10,6 +10,17 @@ Plain **PHP 8 · MySQL/MariaDB · PDO · vanilla JavaScript · one global
 stylesheet**, laid out as **MVC**. No frameworks, no Composer, no npm, no build
 step.
 
+## Live demo
+
+**<https://travelvista.linkpc.net/>**
+
+This same code, running with the seed data, so the site can be looked at without
+installing anything. Sign in with any of the [demo accounts](#demo-accounts)
+below — the password is `password`.
+
+It is a temporary host put up for the submission and may go offline; the local
+setup below is the reference copy.
+
 ---
 
 ## Requirements
